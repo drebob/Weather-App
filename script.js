@@ -1,10 +1,11 @@
 
 function fetchWeather() {
+  // enter your api key here
+  var apikey = '63ca47b3c4a7de243aa098f9ad8410b4';
   var searchText = document.querySelector('#search-bar').value;
   console.log(searchText);
 
-const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchText}&appid=63ca47b3c4a7de243aa098f9ad8410b4
-&units=metric`;
+const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchText}&appid=${apikey}&units=metric`;
 
   fetch(url)
     .then(response => response.json())
