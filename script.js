@@ -1,7 +1,7 @@
 
 function fetchWeather() {
   // enter your api key here
-  var apikey = '63ca47b3c4a7de243aa098f9ad8410b4';
+  var apikey = 'PASTE YOUR API KEY HERE';
   var searchText = document.querySelector('#search-bar').value;
   console.log(searchText);
 

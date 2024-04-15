@@ -6,7 +6,7 @@
 
 To use the app, simply:
 - Go to OpenWeather and create an API key(free)
-- Paste your API key into line 4 of script.js
+- Paste your API key into where it says PASTE YOUR API KEY HERE on line 4 of script.js
 - Type the city you're looking for into the search bar
 - Hit enter, or click submit
 - Let the app do its ✨Magic ✨
