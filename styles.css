@@ -1,3 +1,5 @@
+* {font-family:'Open Sans'}
+
 h1 {
     color: blue;
 }
@@ -15,7 +17,9 @@ ul {
 
 img {
     filter:brightness(0) invert(1);
-    width: 100%;
+    width: 75%;
+    margin: auto;
+    display: block;
 }
 
 .weather-info {

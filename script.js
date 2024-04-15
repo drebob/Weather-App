@@ -1,12 +1,10 @@
 
-document.querySelector('.search-button').addEventListener('click', function() {
-  var searchText = document.querySelector('.search-bar').value;
+function fetchWeather() {
+  var searchText = document.querySelector('#search-bar').value;
   console.log(searchText);
-
 
 const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchText}&appid=63ca47b3c4a7de243aa098f9ad8410b4
 &units=metric`;
-
 
   fetch(url)
     .then(response => response.json())
@@ -16,12 +14,18 @@ const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchText}&app
         weather[0]["icon"]
       }.svg`;
       document.getElementById('icon').src = icon;
-      document.getElementById('city').textContent = name + ",";
-      document.getElementById('weather').textContent = weather[0]["description"] + ", ";
-      document.getElementById('temp').textContent = main.temp + " degrees farenheit, ";
-      document.getElementById('humidity').textContent = main.humidity + " humidity,";
+      document.getElementById('city').textContent = "City: " + name;
+      document.getElementById('temp').textContent =  "Temperature: " + main.temp + "°C";
+      document.getElementById('humidity').textContent = "Humidity: " + main.humidity + "%";
+      document.getElementById('weather').textContent = "Description: " + weather[0]["description"];
      // document.getElementById('sys').textContent = sys.country + ",";
-    })
-  });
+    });
+  }
    
+  document.querySelector('#search-button').addEventListener('click', fetchWeather);
 
+  document.querySelector('#search-bar').addEventListener('keyup', function(event) {
+    if (event.keyCode === 13) {
+      fetchWeather();
+    }
+  });

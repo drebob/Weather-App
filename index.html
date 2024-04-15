@@ -4,14 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="styles.css">
-   
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
 </head>
 <body>
     <h1>Weather App</h1>
-    
     <div class="search-box">
-        <input type="text" class="search-bar" placeholder="Search for a city...">
-        <button class="search-button">Search</button>
+        <input type="text" id="search-bar" placeholder="Search for a city...">
+        <button id="search-button">Search</button>
     </div>
     <div class="weather-info">
     <ul>
@@ -22,13 +21,13 @@
         <span id="city"></span>
     </li>
     <li>
-        <span id="weather"></span>
-    </li>
-    <li>
         <span id="temp"></span>
     </li>
     <li>
         <span id="humidity"></span>
+    </li>
+    <li>
+        <span id="weather"></span>
     </li>
     </ul>
     </div>
