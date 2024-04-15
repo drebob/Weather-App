@@ -22,6 +22,9 @@ img {
     display: block;
 }
 
+.search-box {
+    margin-bottom: 1em;
+}
 .weather-info {
     background: linear-gradient(to bottom, rgb(5, 117, 230), rgb(33, 60, 157));
     padding: 1em;
