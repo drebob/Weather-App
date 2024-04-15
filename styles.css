@@ -29,3 +29,7 @@ img {
     width: fit-content;
     border-radius: 10px;
 }
+
+#city {
+    font-size:2em;
+}

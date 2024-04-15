@@ -13,11 +13,17 @@ const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchText}&app
       const icon = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${
         weather[0]["icon"]
       }.svg`;
+
+      
+     var weatherDescription = weather[0]["description"];
+     var modStr = weatherDescription[0].toUpperCase() + weatherDescription.slice(1);
+
+
       document.getElementById('icon').src = icon;
-      document.getElementById('city').textContent = "City: " + name;
+      document.getElementById('city').textContent = name;
       document.getElementById('temp').textContent =  "Temperature: " + main.temp + "°C";
       document.getElementById('humidity').textContent = "Humidity: " + main.humidity + "%";
-      document.getElementById('weather').textContent = "Description: " + weather[0]["description"];
+      document.getElementById('weather').textContent = "Description: " + modStr;
      // document.getElementById('sys').textContent = sys.country + ",";
     });
   }
